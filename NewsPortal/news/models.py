@@ -85,7 +85,7 @@ class Category(models.Model):
 
 class CategorySubscribers(models.Model):
     sub_categories = models.ForeignKey(Category, on_delete=models.CASCADE)
-    sub_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    sub_users = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.sub_categories}, {self.sub_users}'
